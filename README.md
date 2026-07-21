@@ -27,7 +27,7 @@ prediction on five tickers using two years of daily market data.
    - 7-day / 30-day SMA overlay on ADANIPOWER.NS.
 4. **Feature engineering** : `pct_change`, `SMA_7`, `SMA_30`, `SMA_ratio`,
    `RSI_14`, `rolling_std_20`, and three lag-return features.
-5. **Regression** — predict next-day close price for TCS.NS.
+5. **Regression** : predict next-day close price for TCS.NS.
 6. **Classification** : predict next-day price direction (up / down) for
    ADANIPOWER.NS.
 
