@@ -49,7 +49,7 @@ prediction on five tickers using two years of daily market data.
 | Residual mean | −2.3733 |
 | Residual std | 60.2810 |
 
-### Classification — ADANIPOWER.NS direction
+### Classification : ADANIPOWER.NS direction
 
 | Metric | Value |
 |---|---|
