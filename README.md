@@ -38,8 +38,6 @@ prediction on five tickers using two years of daily market data.
 | Regression (TCS.NS next-day close) | `LinearRegression` | `TimeSeriesSplit` (5 folds, shuffle=False) |
 | Classification (ADANIPOWER.NS direction) | `RandomForestClassifier` (200 trees, max_depth=5) | `TimeSeriesSplit` (5 folds, shuffle=False) |
 
-## Actual results (from the run)
-
 ### Regression : TCS.NS next-day close
 
 | Metric | Value |
