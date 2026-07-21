@@ -21,7 +21,7 @@ prediction on five tickers using two years of daily market data.
 3. **EDA**
    - Normalized price chart (base = 100) to compare all five NSE-listed assets.
    - Daily return distributions with summary statistics.
-   - Correlation heatmap — GOLDBEES' average correlation with the four equities
+   - Correlation heatmap : GOLDBEES' average correlation with the four equities
      is **0.037** (near zero, TCS is slightly negative at −0.004), confirming
      gold's diversification role.
    - 7-day / 30-day SMA overlay on ADANIPOWER.NS.
