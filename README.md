@@ -15,9 +15,9 @@ prediction on five tickers using two years of daily market data.
 
 ## What the project does
 
-1. **Data collection** — pulls ~499 trading days of OHLCV data per ticker via
+1. **Data collection** : pulls ~499 trading days of OHLCV data per ticker via
    `yfinance`.
-2. **Cleaning** — null checks, forward-fill, dtype verification.
+2. **Cleaning** : null checks, forward-fill, dtype verification.
 3. **EDA**
    - Normalized price chart (base = 100) to compare all five NSE-listed assets.
    - Daily return distributions with summary statistics.
@@ -25,10 +25,10 @@ prediction on five tickers using two years of daily market data.
      is **0.037** (near zero, TCS is slightly negative at −0.004), confirming
      gold's diversification role.
    - 7-day / 30-day SMA overlay on ADANIPOWER.NS.
-4. **Feature engineering** — `pct_change`, `SMA_7`, `SMA_30`, `SMA_ratio`,
+4. **Feature engineering** : `pct_change`, `SMA_7`, `SMA_30`, `SMA_ratio`,
    `RSI_14`, `rolling_std_20`, and three lag-return features.
 5. **Regression** — predict next-day close price for TCS.NS.
-6. **Classification** — predict next-day price direction (up / down) for
+6. **Classification** : predict next-day price direction (up / down) for
    ADANIPOWER.NS.
 
 ## Models used
@@ -40,7 +40,7 @@ prediction on five tickers using two years of daily market data.
 
 ## Actual results (from the run)
 
-### Regression — TCS.NS next-day close
+### Regression : TCS.NS next-day close
 
 | Metric | Value |
 |---|---|
@@ -77,16 +77,16 @@ prediction on five tickers using two years of daily market data.
 
 ## What didn't work well
 
-- **Regression R² is misleading.** The 0.878 R² is mostly autocorrelation — stock
+- **Regression R² is misleading.** The 0.878 R² is mostly autocorrelation, stock
   prices are serially correlated, so the model learns "tomorrow ≈ today."  The
   RMSE of ₹55 on a ₹2,200 stock (~2.5% error) is too noisy to trade on.
-- **Classification doesn't beat the baseline.** 55.9% vs 56.3% — the model
+- **Classification doesn't beat the baseline.** 55.9% vs 56.3% : the model
   actually underperforms always predicting "Down." It's heavily biased toward
   that class (Up recall is only 10%). Price-only features lack the signal to
   reliably call daily direction.
 - **No external features.** Limiting ourselves to price-derived indicators
   (SMA, RSI, lagged returns) leaves out volume dynamics, macro data, and
-  sentiment — all of which could help but are out of scope for this submission.
+  sentiment, all of which could help but are out of scope for this submission.
 
 ## How to run
 
